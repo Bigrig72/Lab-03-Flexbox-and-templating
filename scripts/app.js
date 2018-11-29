@@ -33,20 +33,35 @@ uniqueHorns.forEach(title => {
 
 
 Horns.readJson = () => {
-  $.get('/../DATA/page-2.json', 'json')
-    .then(data => {
-      data.forEach(obj => {
-        AllUniqueHorns.push(new UniqueHorns(obj));
-       });
-     })
-    .then(UniqueHorns.loadHorns)
- }
+  // let hornOptions = $(`#keywords`);
+  // let uniqueKeywords = [];
+  // $.each(Horns.allKeywords, function(i, el) {
+  //   if($.inArray(el, uniqueKeywords) === -1) uniqueKeywords.push(el);
+  //   hornOptions.append(`<option>${uniqueKeywords[i]}</option>`);
+  // });
 
- Horns.loadHorns = () => {
-   let hornOptions = $('#keywords');
-  for (let i = 0; i < allUniqueHorns.length; i++) {
-     hornOptions.append(`<option>${allUniqueHorns[i].keyword}</option>`);
-   }
+  let hornOptions = $('#keywords');
+  for (let i = 0; i < Horns.allHorns.length; i++) {
+    if($.inArray(i, Horns.allKeywords) >= 0) {
+      continue;
+    } else {
+      Horns.allKeywords.push(Horns.allHorns[i].keyword);
+      hornOptions.append(`<option>${Horns.allHorns[i].keyword}</option>`);
+    }
   }
+  // let hornOptions = $('#keywords');
+  // for (let i = 0; i < Horns.allHorns.length; i++) {
+  //   hornOptions.append(`<option>${Horns.allHorns[i].keyword}</option>`);
+  // }
+
+  //How to remove duplicates in drop down???
+
+  console.log(Horns.allHorns);
+  // Horns.allhorns.forEach(horn => horn.render());
+  for (let i = 0; i < Horns.allHorns.length; i++) {
+    Horns.allHorns[i].render();
+    console.log(i);
+  }
+}
 
   $(() => UniqueHorns.readJson());
