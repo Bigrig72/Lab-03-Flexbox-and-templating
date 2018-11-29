@@ -5,16 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Lab 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-  <script id="second-page-template" type="text/x-handlebars-template">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Underdog" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" >
+  <script id="horn-template" type="text/x-handlebars-template">
   <div>
     <h2>Title: {{ title }}</h2>
-    <p>image_url: {{ image_url }}</p>
+    <img src= "{{ image_url }}">
     <p>description: {{ description }} </p>
     <p>keyword: {{ keyword }} </p>
     <p>horns: {{ horns }} </p>
-  {{{ body }}}
-  </div></script>
+  </div>
+</script>
 </head>
 <body>
   <header>
@@ -24,17 +26,15 @@
       </select>
   </header>
   <main>
-    <section id="horn-animals-template">
-
+    <section id="photo-template">
     </section>
-    <div class="photo-container">
-      </div>
+  
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" ></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="scripts/app.js"></script>
-  <script src="scripts/page-1.json"></script>
-  <script src="scripts/page-2.json"></script>
+  
 </body>
+
 </html>
