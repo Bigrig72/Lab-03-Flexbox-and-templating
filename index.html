@@ -1,0 +1,40 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lab 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <script id="second-page-template" type="text/x-handlebars-template">
+  <div>
+    <h2>Title: {{ title }}</h2>
+    <p>image_url: {{ image_url }}</p>
+    <p>description: {{ description }} </p>
+    <p>keyword: {{ keyword }} </p>
+    <p>horns: {{ horns }} </p>
+  {{{ body }}}
+  </div></script>
+</head>
+<body>
+  <header>
+      <h1>The Gallery of Horns</h1>
+      <select id="keywords">
+        <option value="default">Filter by Keyword</option>
+      </select>
+  </header>
+  <main>
+    <section id="horn-animals-template">
+
+    </section>
+    <div class="photo-container">
+      </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/page-1.json"></script>
+  <script src="scripts/page-2.json"></script>
+</body>
+</html>
